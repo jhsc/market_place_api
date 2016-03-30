@@ -31,6 +31,7 @@ group :test do
   gem "rspec-rails", "~> 3.4.0"
   gem "factory_girl_rails"
   gem 'ffaker'
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
 end
 
 gem 'devise', '~> 3.5', '>= 3.5.6'

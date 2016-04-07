@@ -14,4 +14,19 @@ RSpec.describe Api::V1::ProductsController, type: :controller do
 
     it { should respond_with 200 }
   end
+
+  describe "GET #index" do
+    before(:each) do
+      4.times { FactoryGirl.create(:product) }
+      get :index
+    end
+
+    it "returns all product records from the database" do
+      product_response = json_response
+      puts "\n\n\n\n #{product_response.inspect}"
+      expect(product_response[:products]).to have(4).items
+    end
+
+    it { should respond_with 200 }
+  end
 end

@@ -35,4 +35,4 @@ group :test do
   gem 'rspec-collection_matchers'
 end
 
-gem 'devise', '~> 3.5', '>= 3.5.6'
+gem 'devise', '~> 4.7'
